@@ -1,15 +1,16 @@
-import './App.css';
-import ReminderList from './components/ReminderList';
-import Reminder from './models/Reminder';
-
-const reminders: Reminder[] = [
-  {id:1,title:"Reminder one"}
-]
+import { useState } from "react";
+import "./App.css";
+import ReminderList from "./components/ReminderList";
+import Reminder from "./models/Reminder";
 
 function App() {
+  const [reminders, setReminders] = useState<Reminder[]>([
+    { id: 1, title: "Reminder one" },
+  ]);
+
   return (
     <div className="App">
-      <ReminderList items={reminders} />    
+      <ReminderList items={reminders} />
     </div>
   );
 }
