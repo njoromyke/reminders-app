@@ -1,14 +1,15 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import ReminderList from './components/ReminderList';
+import Reminder from './models/Reminder';
+
+const reminders: Reminder[] = [
+  {id:1,title:"Reminder one"}
+]
 
 function App() {
   return (
     <div className="App">
-      <button className="btn btn-primary">
-        Click Me
-      </button>
-      
+      <ReminderList items={reminders} />    
     </div>
   );
 }
